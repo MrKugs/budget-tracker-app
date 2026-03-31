@@ -7,7 +7,7 @@ if 'expenses_list' not in st.session_state:
     st.session_state.expenses_list = []
 
 # Title of the app
-st.title("💰 Personal Budget Tracker")
+st.title("Personal Budget Tracker")
 
 # Form section to add a new expense
 st.subheader("Add a New Expense")
