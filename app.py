@@ -60,8 +60,8 @@ if st.session_state.expenses_list:
     # Convert the list of dictionaries into a Pandas DataFrame for easy table display
     df = pd.DataFrame(st.session_state.expenses_list)
     
-    # Display the table (st.table creates a static table like in the screenshot)
-    st.table(df)
+    # Display the table with formatting for 2 decimal places
+    st.table(df.style.format({"Amount Spent (RM)": "{:.2f}"}))
     
     # Calculate total amount
     total_expenses = df["Amount Spent (RM)"].sum()
